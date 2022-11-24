@@ -1,5 +1,7 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
+import { ContentComponent } from './shared/components/content/content.component';
+import { content } from './shared/routes/routes';
 
 const routes: Routes = [
   {
@@ -8,8 +10,17 @@ const routes: Routes = [
   },
   {
     path: '',
-    redirectTo: 'home',
+    redirectTo: 'admin/home',
     pathMatch: 'full'
+  },
+  {
+    path: '',
+    component: ContentComponent,
+    children: content
+  },
+  {
+    path: '**',
+    redirectTo: ''
   },
 ];
 

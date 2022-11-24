@@ -1,0 +1,25 @@
+@media(min-width: 768px) {
+  .mobile-header {
+    display: none;
+  }
+
+  .header {
+    display: block;
+  }
+}
+
+@media(max-width: 768px) {
+  .mobile-header {
+    display: block;
+  }
+
+  .header {
+    display: none;
+  }
+}
+.active{
+  --color: #0944A5 !important;
+}
+ion-button {
+  --color: #fff !important;
+}
